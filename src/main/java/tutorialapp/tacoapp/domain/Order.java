@@ -20,6 +20,8 @@ public class Order implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
+    @ManyToOne
+    private User user;
     private Date placedAt;
     @NotBlank(message="Name is required")
     private String name;
